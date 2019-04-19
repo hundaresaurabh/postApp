@@ -31,7 +31,7 @@ export class EditDialogComponent implements OnInit {
 
     this.changedPost.emit(this.editPostForm.value);
     this.postsSevice.updatePost(this.editPostForm.value).subscribe(res => {
-      console.log('res**', JSON.stringify(res));
+      console.log('res**', res);
     });
   }
 

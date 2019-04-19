@@ -31,7 +31,6 @@ export class PostsService {
   }
 
   updatePost(data){
-    console.log(data);
     let header = new HttpHeaders();
     header.append('Content-Type', 'application/json');
     return this.httpClient.put(environment.REST_URL , data.id, {headers: header});

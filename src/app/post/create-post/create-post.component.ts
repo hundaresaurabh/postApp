@@ -22,14 +22,13 @@ export class CreatePostComponent implements OnInit {
   ngOnInit() {
     this.postsSevice.getPosts().subscribe(res => {
       this.allPosts.push(res);
-      console.log(this.allPosts[0].length);
       this.postLength = this.allPosts[0].length;
     });
   }
   submit(){
     Object.assign(this.postForm.value, {userId: 10, "id":this.postLength++});
     this.postsSevice.createPost(this.postForm.value).subscribe(res => {
-      console.log(res);
+      this.allPosts.push(res);
     });
   }
 }

@@ -40,7 +40,6 @@ export class PostComponent implements OnInit {
 
 
   editPost(data){
-    console.log(data);
     const dialogRef = this.dialog.open(EditDialogComponent, {
       width: '350px',
       data: data

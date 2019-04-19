@@ -15,7 +15,6 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
     this.postsService.getPosts().subscribe((res:any) => {
-      console.log('res', res);
       this.posts = res;
     });
   }
@@ -26,10 +25,6 @@ export class PostListComponent implements OnInit {
 
   addPost(){
     this.router.navigateByUrl('createpost');
-   /*  this.postsService.createPost().subscribe(res => {
-      console.log(res);
-      
-    }); */
   }
 
 }
