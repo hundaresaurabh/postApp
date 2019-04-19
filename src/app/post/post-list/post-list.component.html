@@ -1,0 +1,12 @@
+<div class="post-list">
+  <h3>Post List</h3>
+  <table>
+      <tr *ngFor="let item of posts | paginate: { itemsPerPage: 10, currentPage: p }" >
+        <td> {{item.title}}</td>
+        <td><button mat-raised-button (click)="getPosts(item.id)">See Post</button></td>
+      </tr>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    
+      <button mat-raised-button color="primary" (click)="addPost()" style="margin-top:2%;">Create Post</button>
+    </table>
+</div>

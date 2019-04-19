@@ -1,0 +1,9 @@
+.post-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .post-card{
+        width: 600px;
+        margin: 5%;
+    }
+}

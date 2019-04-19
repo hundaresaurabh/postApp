@@ -1,0 +1,14 @@
+<div class="post-form-container">
+  <h3>Create Post</h3>
+  <form [formGroup]="postForm" (ngSubmit)="submit()" class="createPost">
+      <mat-form-field>
+          <input matInput placeholder="Input" formControlName="title">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <textarea matInput placeholder="Textarea" formControlName="body"></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary">Submit</button>
+  </form>
+</div>

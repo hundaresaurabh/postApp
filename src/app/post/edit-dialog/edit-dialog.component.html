@@ -1,0 +1,13 @@
+<div class="example-container">
+    <form [formGroup]="editPostForm" (ngSubmit)="submit()" class="editPost">
+        <mat-form-field>
+            <input matInput placeholder="Post Title" formControlName="title">
+          </mat-form-field>
+        
+          <mat-form-field>
+            <textarea matInput placeholder="Post" formControlName="body"></textarea>
+          </mat-form-field>
+  
+          <button mat-raised-button color="primary">Submit</button>
+    </form>
+  </div>
